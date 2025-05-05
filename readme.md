@@ -27,6 +27,26 @@
 ## Repository
 - https://github.com/tkmagesh/cisco-gofoundation-may-2025
 
+## Daywise Breakup
+### Day-01
+    - Data Types
+    - Language Constructs 
+        - variables
+        - constants
+        - if else, select case
+        - for
+        - functions
+### Day-02
+    - error handling
+    - panic & recovery
+    - modules & packages
+    - structs
+### Day-03
+    - methods
+    - type assertion
+    - abstraction (interfaces)
+    - concurrency
+    
 ## Why Go?
 - Simplicity
     - ONLY 25 keywords
@@ -64,5 +84,7 @@
         - "sync" package
         - "sync/atomic" package
 ![image](./images/WhyGo.png)
+
+
 
 
