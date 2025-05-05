@@ -194,3 +194,7 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 - if else
 - switch case
 - for
+
+## Functions
+    - Named results
+    - Variadic function
