@@ -201,3 +201,7 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
     - Anonymous function
         - no names
         - have to be immediately invoked
+    - Higher Order functions
+        - Assign a function as a value to a variable
+        - Pass a function as an argument
+        - Return a function as a return value
