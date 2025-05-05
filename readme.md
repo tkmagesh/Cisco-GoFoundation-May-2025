@@ -189,3 +189,8 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 
 ## iota
 - Constants group with auto-generated values
+
+## Constructs
+- if else
+- switch case
+- for
