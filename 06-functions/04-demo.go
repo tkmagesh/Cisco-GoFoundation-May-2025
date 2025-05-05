@@ -30,20 +30,20 @@ func main() {
 		fmt.Printf("Hi %s %s, Have a wonderful day!\n", firstName, lastName)
 	}
 	greet("Ramesh", "Jayaraman")
-	/*
 
+	var add func(int, int) int
+	add = func(x, y int) int {
+		return x + y
+	}
+	addResult := add(100, 200)
+	fmt.Println("Add Result :", addResult)
 
+	var divide func(int, int) (int, int)
+	divide = func(x, y int) (quotient, remainder int) {
+		quotient, remainder = x/y, x%y
+		return
+	}
+	q, r := divide(100, 7)
+	fmt.Printf("dividing 100 by 7, quotient = %d and remainder = %d\n", q, r)
 
-
-		addResult := func(x, y int) int {
-			return x + y
-		}(100, 200)
-		fmt.Println("Add Result :", addResult)
-
-		q, r := func(x, y int) (quotient, remainder int) {
-			quotient, remainder = x/y, x%y
-			return
-		}(100, 7)
-		fmt.Printf("dividing 100 by 7, quotient = %d and remainder = %d\n", q, r)
-	*/
 }
