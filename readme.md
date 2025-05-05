@@ -85,6 +85,17 @@
         - "sync/atomic" package
 ![image](./images/WhyGo.png)
 
+## Compilation
+```shell
+go build [filename.go]
 
+# create a binary in a different name
+go build -o [binary_name] [filename.go]
+```
+
+## Compile & Execute
+```shell
+go run [filename.go]
+```
 
 
