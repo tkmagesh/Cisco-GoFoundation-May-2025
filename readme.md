@@ -27,3 +27,42 @@
 ## Repository
 - https://github.com/tkmagesh/cisco-gofoundation-may-2025
 
+## Why Go?
+- Simplicity
+    - ONLY 25 keywords
+    - Only one way doing things
+        - var, :=
+        - if else, switch case
+        - for
+        - function
+        - type
+        - package
+    - No access modifiers (NO private/public/protected keywords)
+    - No reference types (everything is a value)
+    - No pointer arithmatic supported by the language ( however, support offered through standard library "unsafe" package)
+    - No classes (Only structs)
+    - No class inheritance (Only struct composition)
+    - No exceptions (Only errors & errors are just values)
+    - No try..catch..finally
+    - No implicit type conversion
+- Performance
+    - Comparable with C++
+    - Close to hardware
+        - Build for specific platform
+        - Compiler has native support for cross compilation
+- Managed Concurrency (**TBD**)
+    - Builtin Scheduler to manage concurrent operations
+    - "Goroutine" for concurrent operations
+        - Cheap (~2KB) vs OS Thread (~4MB)
+    - Concurrency support is built in the language
+        - "go" keyword
+        - "chan" datatype
+        - "<-" operator
+        - "range" construct
+        - "select-case" construct
+    - Standard library support
+        - "sync" package
+        - "sync/atomic" package
+![image](./images/WhyGo.png)
+
+
