@@ -183,3 +183,9 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 ### Function scope
 - CAN use ":="
 - CANNOT have unused variables
+
+## Constants
+- CAN have unused constants (in both "function" and "package" scope)
+
+## iota
+- Constants group with auto-generated values
