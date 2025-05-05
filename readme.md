@@ -175,3 +175,11 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
     - https://pkg.go.dev/std
 - Source Code
     - $(go env GOROOT)/src 
+
+## Package Vs Function scope
+### Package scope
+- CANNOT use ":=" (Only "var" is allowed)
+- CAN have unused variables
+### Function scope
+- CAN use ":="
+- CANNOT have unused variables
