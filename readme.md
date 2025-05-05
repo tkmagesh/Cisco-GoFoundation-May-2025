@@ -198,3 +198,6 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 ## Functions
     - Named results
     - Variadic function
+    - Anonymous function
+        - no names
+        - have to be immediately invoked
