@@ -205,3 +205,5 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
         - Assign a function as a value to a variable
         - Pass a function as an argument
         - Return a function as a return value
+    - Deferred functions
+        - postpone the execution of a function until the current function execution is completed
