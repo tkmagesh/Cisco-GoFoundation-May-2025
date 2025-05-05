@@ -85,6 +85,7 @@ func main() {
 		fmt.Printf(str, x, y, result)
 	*/
 
+	// combining variable declarations & initialization of different types
 	/*
 		var (
 			x, y   int    = 100, 200
