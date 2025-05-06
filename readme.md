@@ -37,10 +37,12 @@
         - for
         - functions
 ### Day-02
+    - collections
     - error handling
     - panic & recovery
     - modules & packages
     - structs
+        - struct composition
 ### Day-03
     - methods
     - type assertion
@@ -207,3 +209,8 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
         - Return a function as a return value
     - Deferred functions
         - postpone the execution of a function until the current function execution is completed
+
+## Collection Types
+### Array
+### Slice
+### Map
