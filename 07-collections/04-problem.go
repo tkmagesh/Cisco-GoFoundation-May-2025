@@ -8,14 +8,32 @@ package main
 import "fmt"
 
 func main() {
-LOOP:
-	for no := 2; no <= 100; no++ {
-		for i := 2; i <= (no / 2); i++ {
-			if no%i == 0 {
-				continue LOOP
-			}
-		}
-		fmt.Printf("Prime No : %d\n", no)
-	}
+	primes := genPrimes(2, 100)
+	printPrimes(primes)
 	fmt.Println("Done!")
+}
+
+func printPrimes(list []int) {
+	for _, primeNo := range list {
+		fmt.Printf("Prime No : %d\n", primeNo)
+	}
+}
+
+func genPrimes(start, end int) []int {
+	var primes []int
+	for no := start; no <= end; no++ {
+		if isPrime(no) {
+			primes = append(primes, no)
+		}
+	}
+	return primes
+}
+
+func isPrime(no int) bool {
+	for i := 2; i <= (no / 2); i++ {
+		if no%i == 0 {
+			return false
+		}
+	}
+	return true
 }
