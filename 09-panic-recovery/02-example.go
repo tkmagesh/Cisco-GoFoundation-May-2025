@@ -5,6 +5,8 @@ Instead the app should display the error and prompt the user for a new divisor a
 IMPORTANT: DO NOT validate the input in the "main" function, instead react to the panic from the "divide" function appropriatively.
 
 Except for modifying the "divide" function, feel free to make ANY change to the code
+
+Solution: Convert the panic into an error
 */
 package main
 
@@ -17,10 +19,28 @@ var ErrDivideByZero error = errors.New("divisor cannot be 0")
 
 func main() {
 	var divisor int
-	fmt.Println("Enter the divisor :")
-	fmt.Scanln(&divisor)
-	q, r := divide(100, divisor)
-	fmt.Println(q, r)
+	for {
+		fmt.Println("Enter the divisor :")
+		fmt.Scanln(&divisor)
+		if q, r, err := divideAdapter(100, divisor); err == nil {
+			fmt.Println(q, r)
+			break
+		} else {
+			fmt.Printf("Errror : %q, Try again!\n", err)
+			continue
+		}
+	}
+}
+
+// adapter to conver the panic into an error
+func divideAdapter(multiplier, divisor int) (quotient, remainder int, err error) {
+	defer func() {
+		if e := recover(); e != nil {
+			err = e.(error)
+		}
+	}()
+	quotient, remainder = divide(multiplier, divisor)
+	return
 }
 
 // 3rd party library API (DO NOT change this code)
