@@ -222,3 +222,6 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 - make()
 ![image](./images/slices.png)
 ### Map
+- Typed collection of key/value pairs
+- Has to be initialized with make() 
+- delete()
