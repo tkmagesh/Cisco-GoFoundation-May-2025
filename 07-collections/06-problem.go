@@ -32,4 +32,5 @@ func main() {
 		}
 	}
 	fmt.Printf("%d letter occurs the most with %d occurrences\n", maxSize, maxCount)
+
 }

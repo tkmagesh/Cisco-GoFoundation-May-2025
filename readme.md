@@ -198,17 +198,17 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 - for
 
 ## Functions
-    - Named results
-    - Variadic function
-    - Anonymous function
-        - no names
-        - have to be immediately invoked
-    - Higher Order functions
-        - Assign a function as a value to a variable
-        - Pass a function as an argument
-        - Return a function as a return value
-    - Deferred functions
-        - postpone the execution of a function until the current function execution is completed
+- Named results
+- Variadic function
+- Anonymous function
+    - no names
+    - have to be immediately invoked
+- Higher Order functions
+    - Assign a function as a value to a variable
+    - Pass a function as an argument
+    - Return a function as a return value
+- Deferred functions
+    - postpone the execution of a function until the current function execution is completed
 
 ## Collection Types
 ### Array
@@ -221,7 +221,17 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 - cap()
 - make()
 ![image](./images/slices.png)
+
 ### Map
 - Typed collection of key/value pairs
 - Has to be initialized with make() 
 - delete()
+
+## Error Handling
+- An Error is just a value "returned" from a function
+- By convention, an error value should implement "error" interface
+    - any object with "Error()" method
+- Ways to create an error
+    - errors.New()
+    - fmt.Errorf()
+    - Custom type implementing "error" interface
