@@ -19,6 +19,7 @@ func main() {
 	hundreds := []int{400, 200, 100}
 	nos = append(nos, hundreds...)
 	fmt.Println(nos)
+	fmt.Println("===============================================")
 
 	// len() - to get the length of the slice
 	fmt.Println("len(nos) =", len(nos))
@@ -32,16 +33,28 @@ func main() {
 	for idx, val := range nos {
 		fmt.Printf("nos[%d] = %d\n", idx, val)
 	}
+	fmt.Println("===============================================")
 
 	// Slices are references
 	nos2 := nos // a copy of reference is assigned
 	nos[0] = 9999
 	fmt.Println("nos =", nos)
 	fmt.Println("nos2 =", nos2)
+	fmt.Println("===============================================")
+
+	// Use copy() to create a copy
+	nosCopy := make([]int, len(nos))
+	copy(nosCopy, nos)
+	fmt.Println("nosCopy = ", nosCopy)
+	nos[0] = 8888
+	fmt.Println("nos =", nos)
+	fmt.Println("nosCopy = ", nosCopy)
+	fmt.Println("===============================================")
 
 	fmt.Println("[main] Before sorting, nos = ", nos)
 	sortSlice(nos) // DONT need to pass a "pointer" as slices are references themselves
 	fmt.Println("[main] After sorting, nos = ", nos)
+	fmt.Println("===============================================")
 
 	// slicing
 	fmt.Println("nos[3:7] = ", nos[3:7])

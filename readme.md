@@ -216,5 +216,9 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 
 ### Slice
 - Varying sized typed collection
-
+- append()
+- len()
+- cap()
+- make()
+![image](./images/slices.png)
 ### Map
