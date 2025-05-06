@@ -324,3 +324,7 @@ go list -m all
 
 #### Go module command reference
 - https://go.dev/ref/mod
+
+## OO Programming in Go
+### Struct
+- Used to encapsulate related data & behavior together
