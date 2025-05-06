@@ -212,5 +212,9 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 
 ## Collection Types
 ### Array
+- Fixed sized typed collection
+
 ### Slice
+- Varying sized typed collection
+
 ### Map
