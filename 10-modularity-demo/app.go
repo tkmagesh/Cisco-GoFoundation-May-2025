@@ -5,10 +5,13 @@ import (
 
 	"github.com/tkmagesh/Cisco-GoFoundation-May-2025/10-modularity-demo/calculator"
 	"github.com/tkmagesh/Cisco-GoFoundation-May-2025/10-modularity-demo/calculator/utils"
+
+	"github.com/fatih/color"
 )
 
 func run() {
-	fmt.Println("Application executed")
+	// fmt.Println("Application executed")
+	color.Red("Application executed")
 	fmt.Println(calculator.Add(100, 200))
 	fmt.Println(calculator.Subtract(100, 200))
 	fmt.Println("Op Count :", calculator.GetOpCount())

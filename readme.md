@@ -158,6 +158,7 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
     - rune (alias for unicode code point)
 
 ### Zero values
+
 | Data Type | Zero value |
 ------------ | ------------- |
 |int family     | 0 |
@@ -171,6 +172,8 @@ GOOS=windows GOARCH=amd64 go build [filename.go]
 |pointer        | nil |
 |function       | nil |
 |struct         | struct instance |
+
+
 
 ## Standard Library Packages
 - Documentation
@@ -285,3 +288,39 @@ go build -o [binary-name] .
 - Accessibility is determined by the naming convention
     - Public - the entity name must start with **uppercase**
     - Private - the entity name must start with **lowercase**
+
+### Using Open Source
+#### Repo
+- https://pkg.go.dev
+- https://github.com/avelino/awesome-go
+
+#### Installation
+
+[downloaded in the GOPATH/pkg folder]
+
+```shell
+# Execute the command in the go.mod folder so that the go.mod file can be updated
+go get <module-name>
+# ex
+go get github.com/fatih/color
+```
+
+#### Update references in the go.mod file 
+```shell
+go mod tidy
+```
+
+#### To download the dependencies referenced in the `go.mod` file
+```shell
+go mod download
+```
+
+#### Other useful module commands
+```shell
+go mod graph
+go mod why <module-name>
+go list -m all
+```
+
+#### Go module command reference
+- https://go.dev/ref/mod
