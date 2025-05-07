@@ -75,11 +75,11 @@
 - Managed Concurrency (**TBD**)
     - Builtin Scheduler to manage concurrent operations
     - "Goroutine" for concurrent operations
-        - Cheap (~2KB) vs OS Thread (~4MB)
+        - Cheap (~2KB) vs OS Thread (~2MB)
     - Concurrency support is built in the language
         - "go" keyword
         - "chan" datatype
-        - "<-" operator
+        - "<-" channel operator
         - "range" construct
         - "select-case" construct
     - Standard library support
@@ -328,3 +328,33 @@ go list -m all
 ## OO Programming in Go
 ### Struct
 - Used to encapsulate related data & behavior together
+### Abstractions
+#### Interfaces
+- Interfaces are "implicitly" implemented in Go
+- Interfaces can be composed
+
+## Concurrency
+### Concurrent Design
+- The application is designed in such a way that it has more than one execution path
+### Concurrency in Go
+- Independent Execution path is represented as a "goroutine" 
+- goroutines are cheap (2 KB)
+- Application build is embedded with a "scheduler"
+- Builtin scheduler schedules the goroutines through the OS threads
+- Scheduler follows "cooperative multitasking"
+
+## Cooperative Multitasking
+![image](./images/cooperative-multitasking.png)
+
+## Pre-emptive Multitasking
+![image](./images/preemptive-multitasking.png)
+
+## Concurrency vs Parallelism
+![image](./images/concurrency-vs-parallelism.png)
+
+## Go Concurrency Model
+![image](./images/go-concurrency.png)
+
+## Threads Vs Goroutines
+![image](./images/threads-vs-goroutines.png)
+
