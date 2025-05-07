@@ -19,6 +19,7 @@ import (
 	"strings"
 )
 
+/* Product Type */
 type Product struct {
 	Id       int
 	Name     string
@@ -29,6 +30,7 @@ func (p Product) Format() string {
 	return fmt.Sprintf("Id = %d, Name = %q, UnitCost = %0.2f", p.Id, p.Name, p.UnitCost)
 }
 
+/* LineItem Type */
 type LineItem struct {
 	Prod  Product
 	Units int
@@ -42,6 +44,7 @@ func (li LineItem) Format() string {
 	return fmt.Sprintf("%s, Units = %d, Item Cost = %0.2f", li.Prod.Format(), li.Units, li.ItemCost())
 }
 
+/* ShoppingCart Type */
 type ShoppingCart struct {
 	LineItems []LineItem
 }
