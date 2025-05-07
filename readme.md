@@ -358,3 +358,7 @@ go list -m all
 ## Threads Vs Goroutines
 ![image](./images/threads-vs-goroutines.png)
 
+## Goroutine synchronization using `WaitGroup`
+- `WaitGroup` is a semaphore based counter
+- Has the ability to block the execution of a function until the counter becomes `0`
+
