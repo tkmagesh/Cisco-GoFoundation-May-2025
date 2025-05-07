@@ -371,3 +371,24 @@ go run -race <filename.go | .>
 go build -race <filename.go | . >
 ```
 
+## Communication between goroutines
+### Channel
+- datatype built to enable communication between goroutines
+#### Declaration
+```go
+var ch chan int
+```
+#### Initialization
+```go
+ch = make(chan int)
+```
+#### Send Operation
+```go
+ch <- 100
+```
+#### Receive Operation
+```go
+data := <- ch
+```
+
+
