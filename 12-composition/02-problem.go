@@ -12,6 +12,15 @@ ShoppingCart
 2. Calculate the overall cart value and print
 */
 
+/*
+TODO:
+1. Create a module
+2. Create a "models" package that has all the models (Product, LineItem, ShoppingCart)
+3. Use the models in the "main.main()"
+4. Add "Remove Line Item" functionality
+5. Add "Update Line Item Quantity" functionality
+*/
+
 package main
 
 import (
